@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(245, 245, 220, 0.719);
+}
+.background {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+
+.background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      20deg,
+      #706088,
+      #4b3d60,
+      #152852,
+      #1e3b7a,
+      #8f6363,
+      #b88783,
+      #ecaa77,
+      #ffec9e,
+      #d6fefe,
+      #d1eefe,
+      #9cbfe4
+      );
+      background-size: 400% 400%;
+      background-position: 100% 0;
+      animation: sky 8s infinite;
+}
+
+
+@keyframes sky {
+  10% {
+    background-position: 100% 0;
+  }
+  53% {
+    background-position: 0 80%;
+  }
+  55% {
+    background-position: 0 80%;
+  }
+  98% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.mountain {
+  position: absolute;
+  background-repeat: repeat;
+  background-position: 28px;
+  background: linear-gradient(50deg, #554226, #ce9238, #fad296);
+  bottom: 0;
+}
+
+.mountain.a {
+  border-radius: 50% 80% 0% 0%;
+  width: 250px;
+  height: 350px;
+  left: -80px;
+  z-index: 2;
+}
+.mountain.b {
+  background: linear-gradient(50deg, #554226, #aa7526, #dbb57c);
+  border-radius: 60% 40% 0% 0%;
+  width: 250px;
+  height: 260px;
+  left: 50px;
+}
+.mountain.c {
+  border-radius: 60% 40% 0% 0%;
+  width: 120px;
+  height: 120px;
+  left: 250px;
+  z-index: 2;
+}
+
+.rotate {
+  position: absolute;
+  /* border: 1px black dashed; */
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  top: 100px;
+  left: -200px;
+  transform: rotate(30deg);
+  animation: spin 8s infinite;
+}
+
+@keyframes spin {
+  10% {
+    transform: rotate(30deg);
+  }
+  45% {
+    transform: rotate(210deg);
+  }
+  55% {
+    transform: rotate(210deg);
+  }
+  90% {
+    transform: rotate(390deg);
+  }
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+.sun {
+  position: absolute;
+  background-color: rgb(255, 238, 83);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+}
+
+.moon {
+  transform: translate(-50%, -50%);
+  top: 105%;
+  left: 50%;
+  height: 90px;
+  width: 90px;
+  box-shadow: 1.25em -1.25em 0 0 #f7f7de;
+  border-radius: 50%;
+  position: absolute;
+}
